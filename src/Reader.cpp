@@ -12,9 +12,7 @@ namespace docx2txt {
                 std::format(
                     "'{}': {}",
                     path,
-                    mz_zip_get_error_string(
-                        mz_zip_get_last_error(&this->zip)
-                    )
+                    mz_zip_get_error_string(mz_zip_get_last_error(&this->zip))
                 )
             );
         }
