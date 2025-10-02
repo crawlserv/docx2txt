@@ -1,9 +1,6 @@
 <div align="center">
   <img src="docx2txt.jpg" width="766px" height="418px" alt="docx2txt">
-  <p>C++ library for converting Word documents to plain text</p>
 </div>
-
-## About
 
 **docx2txt** is a small and free C++20 library for converting Microsoft Word documents (`*.docx`) into plain text.
 
@@ -11,9 +8,9 @@ It uses [miniz](https://github.com/richgel999/miniz) (included as source code) f
 
 ## Features
 
-- extracts all text from paragraphs in the main document, including text inside tables.
-- does **not** extract text from headers, footers, or floating elements such as text boxes and captions.
-- provides a **single C++ function** with the following signature:
+- Extracts all text from paragraphs in the main document, including text inside tables.
+- Does **not** extract text from headers, footers, or floating elements such as text boxes and captions.
+- Provides a **single C++ function** with the following signature:
 
 ```C++
 namespace docx2txt {
