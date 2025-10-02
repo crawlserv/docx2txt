@@ -13,5 +13,5 @@
 #endif
 
 namespace docx2txt {
-  [[nodiscard]] std::string doc2txt(const std::string& path);
+  [[nodiscard]] std::string docx2txt(const std::string& path);
 }

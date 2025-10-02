@@ -30,7 +30,7 @@ int main(int argc, char ** argv) {
 
     try {
         const auto expected = ReadFile(resultPath);
-        const auto actual = docx2txt::doc2txt(inPath);
+        const auto actual = docx2txt::docx2txt(inPath);
 
         if(actual == expected) {
             return EXIT_SUCCESS;
