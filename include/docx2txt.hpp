@@ -14,6 +14,6 @@
 
 namespace docx2txt {
 
-  [[nodiscard]] DOCX2TXT_API std::string doc2txt(const std::string& path);
+  [[nodiscard]] DOCX2TXT_API std::string docx2txt(const std::string& path);
 
 } // namespace docx2txt
