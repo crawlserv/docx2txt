@@ -1,6 +1,5 @@
 <div align="center">
-  <img src="docx2txt.jpg" width="766px" height="418px" alt="docx2txt logo">
-  <h1>docx2txt</h1>
+  <img src="docx2txt.jpg" width="766px" height="418px" alt="docx2txt">
   <p>C++ library for converting Word documents to plain text</p>
 </div>
 
