@@ -11,7 +11,7 @@ It uses [miniz](https://github.com/richgel999/miniz) (included as source code) f
 
 - Extracts all text from paragraphs in the main document, including text inside tables.
 - Does **not** extract text from headers, footers, or floating elements such as text boxes and captions.
-- Provides a **single C++ function** with the following signature:
+- Provides **a single C++ function** with the following signature:
 
 ```C++
 namespace docx2txt {
@@ -21,9 +21,9 @@ namespace docx2txt {
 } // namespace docx2txt 
 ```
 
-Pass the (relative or absolute) path of your `*.docx` file and the function returns the plain text contained in the file.
+Pass the path of your `*.docx` file and the function returns the plain text contained in the file.
 
-If the file cannot be opened, read, or parsed, the function throws a `std::runtime_error`.
+If the file cannot be opened, uncompressed, or parsed, the function throws a `std::runtime_error`.
 
 ## Example
 ```C++
@@ -45,9 +45,9 @@ cd 3rdparty
 
 git submodule add https://github.com/crawlserv/docx2txt
 git submodule update --init --recursive
-```cmake
-Then, include it in your root `CMakeLists.txt`:
 ```
+Then, include it in your root `CMakeLists.txt`:
+```cmake
 add_subdirectory("3rdparty/docx2txt")
 
 target_link_libraries(yourtarget PRIVATE docx2txt)
