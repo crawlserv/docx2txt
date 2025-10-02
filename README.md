@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docx2txt.jpg" width="766px" height="418px" alt="docx2txt">
+  <img src="docx2txt.jpg" width="383px" height="209px" alt="docx2txt">
   <p></p>
 </div>
 
