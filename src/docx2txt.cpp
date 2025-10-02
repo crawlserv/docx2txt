@@ -8,7 +8,7 @@
 
 namespace docx2txt {
 
-    std::string DOCX2TXT_API doc2txt(const std::string& path) {
+    std::string DOCX2TXT_API docx2txt(const std::string& path) {
         return Document(path).ToText();
     }
 
