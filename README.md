@@ -1,3 +1,9 @@
+<div align="center">
+  <img src="docx2txt.png" width="565px" height="565px" alt="docx2txt logo">
+  <h1>docx2txt</h1>
+  <p>C++ library for converting Word documents to plain text</p>
+</div>
+
 ## About
 
 **docx2txt** is a small and free C++20 library for converting Microsoft Word documents (`*.docx`) into plain text.
