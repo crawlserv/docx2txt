@@ -35,8 +35,8 @@ namespace docx2txt {
         text.reserve(maxSize);
 
         for(const auto& paragraph : paragraphs) {
-            for(pugi::xml_node run : paragraph.node().children("w:r")) {
-                pugi::xml_node textNode = run.child("w:t");
+            for(const auto& run : paragraph.node().children("w:r")) {
+                const auto textNode = run.child("w:t");
 
                 if(textNode) {
                     text += textNode.text().get();
