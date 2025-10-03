@@ -1,4 +1,4 @@
-#include "docx2txt.hpp"
+#include <docx2txt.hpp>
 
 #include <cstddef>
 #include <filesystem>
