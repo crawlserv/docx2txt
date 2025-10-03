@@ -14,4 +14,4 @@
 
 namespace docx2txt {
   [[nodiscard]] std::string docx2txt(const std::string& path);
-}
+} // namespace docx2txt

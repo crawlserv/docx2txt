@@ -61,4 +61,4 @@ namespace docx2txt {
         return location;
     }
 
-}
+} // namespace docx2txt

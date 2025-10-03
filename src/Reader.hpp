@@ -30,4 +30,4 @@ namespace docx2txt {
         [[nodiscard]] int LocateFile(const std::string& pathInZip);
     };
 
-}
+} // namespace docx2txt

@@ -12,4 +12,4 @@ namespace docx2txt {
         return Document(path).ToText();
     }
 
-}
+} // namespace docx2txt

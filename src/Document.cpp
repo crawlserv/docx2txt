@@ -55,4 +55,4 @@ namespace docx2txt {
         return text;
     }
 
-}
+} // namespace docx2txt

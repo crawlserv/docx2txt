@@ -26,4 +26,4 @@ namespace docx2txt {
         [[nodiscard]] static std::string XmlDocToText(const pugi::xml_document& doc, std::size_t maxSize);
     };
 
-}
+} // namespace docx2txt
