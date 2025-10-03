@@ -22,4 +22,4 @@ namespace docx2txt {
         return std::string(static_cast<char *>(this->data), this->size);
     }
 
-} // docx2txt
+} // namespace docx2txt

@@ -22,4 +22,4 @@ namespace docx2txt {
         std::size_t size = 0;
     };
 
-} // docx2txt
+} // namespace docx2txt
