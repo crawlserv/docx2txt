@@ -3,15 +3,18 @@
   <p></p>
 </div>
 
-**docx2txt** is a small and free C++20 library for converting Microsoft Word documents (`*.docx`) into plain text.
+**docx2txt** is a small and free C++20 library for converting Microsoft Word documents (`*.docx`) into plain text. It also supports OpenDocument text (`*.odt`), but defaults to Word's Office Open XML when encountering an unknown file extension. 
 
-It uses [miniz](https://github.com/richgel999/miniz) (included as source code) for decompression and [pugixml](https://pugixml.org/) (included as submodule) for parsing.
+**docx2txt** uses [miniz](https://github.com/richgel999/miniz) (included as source code) for decompression and [pugixml](https://pugixml.org/) (included as submodule) for parsing.
 
 ## Features
 
-- Extracts all text from paragraphs in the main document, including text inside tables.
-- Does **not** extract text from headers, footers, or floating elements such as text boxes and captions.
+- Extracts all text from paragraphs in the main document, including text inside tables and text boxes.
+- Does **not** extract text from headers or footers.
 - Provides **a single C++ function** with the following signature:
+
+> [!NOTE]
+> Text from floating elements like text boxes are inserted at their *anchor positon*, not necessarily where they appear visually.
 
 ```C++
 namespace docx2txt {

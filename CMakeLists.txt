@@ -20,7 +20,8 @@ if(DOCX2TXT_SHARED)
 
     add_library(docx2txt SHARED)
 else()
-    add_library(docx2txt STATIC)
+    add_library(docx2txt STATIC
+            src/Type.hpp)
 endif()
 
 target_sources(docx2txt PRIVATE
@@ -49,21 +50,28 @@ if(DOCX2TXT_TESTS)
     target_link_libraries(docx2txt_test PRIVATE docx2txt)
     target_include_directories(docx2txt_test PRIVATE include)
 
-    file(GLOB DOCX_CASES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/tests/data/*.docx")
+    file(GLOB DOCX_FILES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/tests/data/*.docx")
+    file(GLOB ODT_FILES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/tests/data/*.odt")
 
-    foreach(docx ${DOCX_CASES})
-        get_filename_component(base "${docx}" NAME_WE)
+    set(TEST_CASES ${DOCX_FILES} ${ODT_FILES})
 
-        # use same expectation (e.g. test.txt) for different sources (e.g. test.docx, test_libre.docx, test_online.docx)
+    foreach(file ${TEST_CASES})
+        get_filename_component(base "${file}" NAME_WE)
+
+        # same expectation (e.g. test.txt) for different sources (e.g. test.docx, test.odt, test_libre.docx,...)
         string(REGEX REPLACE "_[^_]*$" "" base_trimmed "${base}")
 
         set(txt "${CMAKE_CURRENT_SOURCE_DIR}/tests/data/${base_trimmed}.txt")
 
-        add_test(NAME docx2txt.${base}
-                COMMAND docx2txt_test "${docx}" "${txt}"
+        get_filename_component(filename "${file}" NAME)
+        string(REPLACE "." "_" testname "${filename}")
+        set(testname "docx2txt_${testname}")
+
+        add_test(NAME ${testname}
+                COMMAND docx2txt_test "${file}" "${txt}"
         )
 
-        message("Test '${base}' added")
+        message("Test '${testname}' added")
     endforeach()
 
     add_custom_target(docx2txt_tests

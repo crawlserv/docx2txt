@@ -48,7 +48,7 @@ int main(int argc, char ** argv) {
 }
 
 void PrintUsage(const std::string& name) {
-    std::cerr << "USAGE: " << name << " <input.docx> <expected.txt>" << std::endl;
+    std::cerr << "USAGE: " << name << " <input.[docx|odt]> <expected.txt>" << std::endl;
 }
 
 std::string ReadFile(const std::string& path) {
